@@ -4,10 +4,10 @@ from manage import app, db, mongo, GIS_institute, EC_institute, DVLA_institute
 
 def add_citizens():
     citizen_1 = EC_institute(
-        first_name="Sabrina",
-        middle_name="Lamie",
+        first_name="Linda",
+        middle_name="Assibi",
         last_name="Awuni",
-        age=22
+        age=29
     )
     citizen_2 = GIS_institute(
         first_name="Sabrina",
@@ -28,15 +28,15 @@ def add_citizens():
         "age": "25",
     }
     #
-    db.session.add(citizen_1)  # Adds new User record to database
-    db.session.add(citizen_2)  # Adds new User record to database
-    db.session.add(citizen_3)  # Adds new User record to database
-    db.session.commit()
-    mongo.db.individual_NHIS.insert(citizen_4)
+    # db.session.add(citizen_1)  # Adds new User record to database
+    # db.session.add(citizen_2)  # Adds new User record to database
+    # db.session.add(citizen_3)  # Adds new User record to database
+    # db.session.commit()
+    # mongo.db.individual_NHIS.insert(citizen_4)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    #add_citizens()
+    # add_citizens()
     errors = []
 
     if request.method == "POST":
