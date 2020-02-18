@@ -1,0 +1,6 @@
+*.pyc
+__pycache__/
+web_soft.sqlite
+.idea
+migrations
+venv/
